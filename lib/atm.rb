@@ -3,7 +3,7 @@ class Atm
 
     def initialize 
         @funds = 1000
-        @pin_code = rand(1000..9999)
+        
     end
 
     def withdraw(amount, pin_code, account)
