@@ -9,6 +9,7 @@ class Account
         set_owner(attrs[:owner])
         @exp_date = set_expire_date
         @account_status = :active
+    
     end
 
     private
