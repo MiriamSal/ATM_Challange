@@ -2,13 +2,13 @@ class Account
 
     STANDARD_VALIDITY_YRS = 5
 
-    attr_accessor :owner, :exp_date, :account_status
-
+    attr_accessor :owner, :exp_date, :account_status, :balance, :pin_code
     def initialize(attrs = {})
         @pin_code = rand(1000..9999)
         set_owner(attrs[:owner])
         @exp_date = set_expire_date
         @account_status = :active
+        @balance = 0
     
     end
 
