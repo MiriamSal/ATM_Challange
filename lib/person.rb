@@ -10,7 +10,7 @@ class Person
         set_name(attrs[:name])
         @cash = 0
         @account = nil
-
+        @name = 'Daniel'
     end
 
     def set_name(obj)
@@ -49,23 +49,23 @@ class Person
         response[:status] == true ? increase_cash(response) : response
     end
 
-    # def increase_cash(response)
-    #     @cash += response[:amount]
-    # end
+    def increase_cash(response)
+        @cash += response[:amount]
+    end
 
-    # def set_name(name)
-    #     name == nil ? missing_name : name
-    # end
+    def set_name(name)
+        name == nil ? missing_name : name
+    end
 
-    # def missing_name
-    #     raise ArgumentError, "A name is required"
-    # end
+    def missing_name
+        raise ArgumentError, "A name is required"
+    end
 
     def missing_account
         raise RuntimeError, "No account present"
     end
 
-    # def missing_atm
-    #     raise RuntimeError, "An ATM is required"
-    # end
+    def missing_atm
+        raise RuntimeError, "An ATM is required"
+    end
 end
